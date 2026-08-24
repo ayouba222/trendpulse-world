@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TrendPulse World - Actualités, IA, Football et Tendances</title>
+  <title>TrendPulse World - Actualités et tendances du monde</title>
 
-  <meta name="description" content="TrendPulse World vous présente les actualités, tendances, IA, technologie, football, Afrique et divertissement.">
+  <meta name="description" content="TrendPulse World : actualités, IA et technologie, football, Afrique, célébrités et tendances du moment.">
+
   <meta name="robots" content="index, follow">
-
-  <meta property="og:title" content="TrendPulse World">
-  <meta property="og:description" content="Les tendances qui font parler le monde.">
-  <meta property="og:type" content="website">
 
   <style>
     * {
@@ -30,7 +27,7 @@
     header {
       background: #111827;
       color: white;
-      padding: 20px;
+      padding: 20px 0;
     }
 
     .container {
@@ -40,7 +37,7 @@
     }
 
     .logo {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: bold;
     }
 
@@ -50,51 +47,104 @@
     }
 
     nav {
-      margin-top: 20px;
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 6px;
       background: #374151;
+      padding: 9px 12px;
+      border-radius: 6px;
     }
 
     nav a:hover {
       background: #4b5563;
     }
 
-    .search {
-      margin: 25px 0;
-    }
-
-    .search input {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
     .hero {
       background: white;
-      padding: 30px;
+      padding: 35px 25px;
+      margin-top: 25px;
       border-radius: 12px;
-      margin-bottom: 25px;
+      text-align: center;
     }
 
     .hero h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 18px;
+    }
+
+    .search-box {
+      margin-top: 25px;
+      display: flex;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px 0 0 6px;
+      font-size: 16px;
+    }
+
+    .search-box button {
+      padding: 13px 18px;
+      border: none;
+      background: #111827;
+      color: white;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 25px 0 40px;
     }
 
     .section-title {
-      margin: 30px 0 15px;
-      font-size: 25px;
+      font-size: 27px;
+      margin: 25px 0 15px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .category {
+      background: white;
+      padding: 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #222;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+
+    .category-icon {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .category h3 {
+      margin-bottom: 5px;
+    }
+
+    .category p {
+      color: #666;
+      font-size: 14px;
     }
 
     .articles {
@@ -103,28 +153,43 @@
       gap: 20px;
     }
 
-    .card {
+    .article {
       background: white;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
 
-    .card-image {
-      height: 150px;
+    .article-image {
+      height: 160px;
       background: #d1d5db;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 45px;
+      font-size: 50px;
     }
 
-    .card-content {
+    .article-content {
       padding: 18px;
     }
 
-    .card h3 {
-      margin-bottom: 8px;
+    .article-content h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .article-content p {
+      color: #666;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 14px;
+      background: #111827;
+      color: white;
+      padding: 8px 13px;
+      border-radius: 6px;
+      text-decoration: none;
     }
 
     .ad {
@@ -133,37 +198,37 @@
       padding: 25px;
       text-align: center;
       margin: 25px 0;
-      color: #6b7280;
+      color: #666;
     }
 
     footer {
       background: #111827;
       color: white;
-      margin-top: 40px;
-      padding: 30px 0;
+      padding: 35px 0;
     }
 
     footer a {
       color: #d1d5db;
-      margin-right: 15px;
       text-decoration: none;
+      margin-right: 15px;
     }
 
     @media (max-width: 700px) {
+      .categories,
       .articles {
         grid-template-columns: 1fr;
       }
 
       .hero h1 {
-        font-size: 25px;
+        font-size: 28px;
       }
 
       nav {
         flex-direction: column;
       }
 
-      nav a {
-        display: block;
+      .search-box {
+        display: flex;
       }
     }
   </style>
@@ -193,88 +258,154 @@
   </div>
 </header>
 
-<main class="container">
+<main>
 
-  <div class="search">
-    <input
-      type="search"
-      placeholder="🔎 Rechercher un article..."
-      id="searchInput">
-  </div>
+  <div class="container">
 
-  <section class="hero">
+    <section class="hero">
 
-    <h1>Bienvenue sur TrendPulse World</h1>
+      <h1>Bienvenue sur TrendPulse World 🌍</h1>
 
-    <p>
-      Découvrez les dernières actualités, tendances,
-      nouvelles technologies, football, Afrique,
-      célébrités et divertissement.
-    </p>
+      <p>
+        Retrouvez les actualités, tendances et sujets
+        qui font parler le monde.
+      </p>
 
-  </section>
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Rechercher une actualité..."
+        >
 
-  <div class="ad">
-    📢 ESPACE PUBLICITAIRE<br>
-    Monetag / Adsterra seront ajoutés ici.
-  </div>
-
-  <h2 class="section-title">🔥 À la une</h2>
-
-  <section class="articles">
-
-    <article class="card">
-      <div class="card-image">📰</div>
-      <div class="card-content">
-        <h3>Les dernières actualités du moment</h3>
-        <p>Découvrez les informations qui font actuellement parler.</p>
+        <button onclick="searchArticle()">
+          🔎 Rechercher
+        </button>
       </div>
-    </article>
 
-    <article class="card">
-      <div class="card-image">🤖</div>
-      <div class="card-content">
-        <h3>Les nouvelles tendances de l'intelligence artificielle</h3>
-        <p>Les innovations technologiques à suivre.</p>
-      </div>
-    </article>
+      <p id="searchMessage" style="margin-top:15px;"></p>
 
-    <article class="card">
-      <div class="card-image">⚽</div>
-      <div class="card-content">
-        <h3>Football et sports</h3>
-        <p>Les dernières informations du monde sportif.</p>
-      </div>
-    </article>
+    </section>
 
-    <article class="card">
-      <div class="card-image">🌍</div>
-      <div class="card-content">
-        <h3>L'actualité africaine</h3>
-        <p>Découvrez les sujets importants en Afrique.</p>
-      </div>
-    </article>
+    <div class="ad">
+      📢 ESPACE PUBLICITAIRE
+    </div>
 
-    <article class="card">
-      <div class="card-image">🎬</div>
-      <div class="card-content">
-        <h3>Célébrités et divertissement</h3>
-        <p>Les tendances et actualités du monde du divertissement.</p>
-      </div>
-    </article>
+    <h2 class="section-title">📂 Nos catégories</h2>
 
-    <article class="card">
-      <div class="card-image">🔥</div>
-      <div class="card-content">
-        <h3>Les tendances du moment</h3>
-        <p>Les sujets qui deviennent rapidement populaires.</p>
-      </div>
-    </article>
+    <section class="categories">
 
-  </section>
+      <a class="category" href="actualites.html">
+        <div class="category-icon">📰</div>
+        <h3>Actualités</h3>
+        <p>Les informations du moment.</p>
+      </a>
 
-  <div class="ad">
-    📢 ESPACE PUBLICITAIRE
+      <a class="category" href="technologie.html">
+        <div class="category-icon">🤖</div>
+        <h3>IA & Technologie</h3>
+        <p>Innovation, IA et nouvelles technologies.</p>
+      </a>
+
+      <a class="category" href="football.html">
+        <div class="category-icon">⚽</div>
+        <h3>Football & Sports</h3>
+        <p>Football et actualités sportives.</p>
+      </a>
+
+      <a class="category" href="afrique.html">
+        <div class="category-icon">🌍</div>
+        <h3>Afrique</h3>
+        <p>Actualités et tendances africaines.</p>
+      </a>
+
+      <a class="category" href="celebrites.html">
+        <div class="category-icon">🎬</div>
+        <h3>Célébrités</h3>
+        <p>Stars, musique, cinéma et divertissement.</p>
+      </a>
+
+      <a class="category" href="tendances.html">
+        <div class="category-icon">🔥</div>
+        <h3>Tendances</h3>
+        <p>Les sujets populaires du moment.</p>
+      </a>
+
+    </section>
+
+    <h2 class="section-title">🔥 À la une</h2>
+
+    <section class="articles">
+
+      <article class="article">
+
+        <div class="article-image">📰</div>
+
+        <div class="article-content">
+
+          <h3>Les actualités qui font parler</h3>
+
+          <p>
+            Découvrez les informations et événements
+            importants du moment.
+          </p>
+
+          <a href="actualites.html" class="read-more">
+            Lire plus
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="article">
+
+        <div class="article-image">🤖</div>
+
+        <div class="article-content">
+
+          <h3>Les nouvelles tendances de l'IA</h3>
+
+          <p>
+            Découvrez les innovations qui transforment
+            notre quotidien.
+          </p>
+
+          <a href="technologie.html" class="read-more">
+            Lire plus
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="article">
+
+        <div class="article-image">⚽</div>
+
+        <div class="article-content">
+
+          <h3>Les dernières nouvelles du football</h3>
+
+          <p>
+            Retrouvez les informations importantes
+            du monde du football.
+          </p>
+
+          <a href="football.html" class="read-more">
+            Lire plus
+          </a>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <div class="ad">
+      📢 ESPACE PUBLICITAIRE
+    </div>
+
   </div>
 
 </main>
@@ -298,34 +429,77 @@
 
     <br><br>
 
-    <p>© 2026 TrendPulse World. Tous droits réservés.</p>
+    <p>
+      © 2026 TrendPulse World. Tous droits réservés.
+    </p>
 
   </div>
 
 </footer>
 
 <script>
+  function searchArticle() {
 
-  const searchInput = document.getElementById("searchInput");
+    const input = document
+      .getElementById("searchInput")
+      .value
+      .trim()
+      .toLowerCase();
 
-  searchInput.addEventListener("input", function() {
+    const message = document.getElementById("searchMessage");
 
-    const search = this.value.toLowerCase();
+    if (input === "") {
+      message.textContent = "Écrivez un sujet à rechercher.";
+      return;
+    }
 
-    const cards = document.querySelectorAll(".card");
+    if (
+      input.includes("ia") ||
+      input.includes("technologie") ||
+      input.includes("tech")
+    ) {
+      window.location.href = "technologie.html";
+      return;
+    }
 
-    cards.forEach(function(card) {
+    if (
+      input.includes("football") ||
+      input.includes("sport")
+    ) {
+      window.location.href = "football.html";
+      return;
+    }
 
-      const text = card.innerText.toLowerCase();
+    if (
+      input.includes("afrique") ||
+      input.includes("africain")
+    ) {
+      window.location.href = "afrique.html";
+      return;
+    }
 
-      card.style.display =
-        text.includes(search) ? "block" : "none";
+    if (
+      input.includes("celebrite") ||
+      input.includes("célébrité") ||
+      input.includes("musique") ||
+      input.includes("cinema") ||
+      input.includes("cinéma")
+    ) {
+      window.location.href = "celebrites.html";
+      return;
+    }
 
-    });
+    if (
+      input.includes("tendance") ||
+      input.includes("viral")
+    ) {
+      window.location.href = "tendances.html";
+      return;
+    }
 
-  });
-
+    window.location.href = "actualites.html";
+  }
 </script>
 
 </body>
-  </html>
+</html>
