@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://TON-DOMAINE.pages.dev/sitemap.xml
+Sitemap: https://trendpulse-world.younsouayouba10.workers.dev/sitemap.xml
